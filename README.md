@@ -1,10 +1,42 @@
+<div align="center">
+
 # Keyboard Event Lab
 
-Visualiza eventos de teclado dentro de su propia área de escritura, permite pausar el registro y exportar una sesión JSON.
+Un espacio para escribir, observar eventos de teclado y exportar una sesión, disponible en el navegador y como aplicación Python.
 
-![Banco de pruebas de teclado](assets/screenshots/keyboard-desktop.png)
+<a href="https://enybyy.github.io/keyboard-event-lab/"><img src="docs/media/demo.svg" width="360" alt="Abrir demo"></a>
 
-[Probar demo](https://enybyy.github.io/keyboard-event-lab/) · [Captura para portafolio](assets/screenshots/keyboard-upwork.png)
+<p><a href="https://github.com/Enybyy"><img src="docs/media/github.svg" width="112" alt="GitHub de Eliud Rojas Mendoza"></a>
+<a href="https://www.linkedin.com/in/eliud-rojas-mendoza-414652212/"><img src="docs/media/linkedin.svg" width="112" alt="LinkedIn de Eliud Rojas Mendoza"></a>
+<a href="https://www.upwork.com/freelancers/~01471ca462b236e8e5"><img src="docs/media/upwork.svg" width="112" alt="Upwork de Eliud Rojas Mendoza"></a></p>
+
+[![Keyboard Event Lab en uso](assets/screenshots/keyboard-desktop.png)](https://enybyy.github.io/keyboard-event-lab/)
+
+*Captura real del laboratorio. El registro se limita a su propia área de escritura.*
+
+[Acerca del proyecto](#acerca-del-proyecto) · [Capturas](#capturas) · [Uso e instalación](#uso-e-instalación)
+
+</div>
+
+## Acerca del proyecto
+
+Al escribir en el área de prueba, el teclado visual y la consola muestran lo que recibe la aplicación: tecla, código, modificadores y pulsación o liberación. La sesión se inicia de forma explícita y puede pausarse, limpiarse o exportarse.
+
+La relación entre una acción y su evento queda a la vista. Esto permite explorar el comportamiento de la entrada de texto y revisar sesiones acotadas, con una versión de escritorio en Python para recorrer el mismo tipo de interacción.
+
+## Capturas
+
+<details>
+<summary><strong>El laboratorio en móvil</strong></summary>
+
+![El laboratorio en móvil](assets/screenshots/keyboard-mobile.png)
+
+</details>
+
+## Uso e instalación
+
+<details>
+<summary><strong>Ver el recorrido, las instrucciones y las notas técnicas</strong></summary>
 
 ## Ejecutar
 
@@ -47,3 +79,17 @@ Los tests verifican inicio/pausa, límite de historial, secuencia, limpieza y ex
 ## English
 
 A visible keyboard event workbench with a browser demo and a small Python/Tkinter desktop application. It captures only its own focused input, requires an explicit start, keeps bounded in-memory history, and exports JSON on request. It does not monitor other applications.
+
+</details>
+
+---
+
+<div align="center">
+
+**Eliud Rojas Mendoza · Enybyy**
+
+<p><a href="https://github.com/Enybyy"><img src="docs/media/github.svg" width="112" alt="GitHub de Eliud Rojas Mendoza"></a>
+<a href="https://www.linkedin.com/in/eliud-rojas-mendoza-414652212/"><img src="docs/media/linkedin.svg" width="112" alt="LinkedIn de Eliud Rojas Mendoza"></a>
+<a href="https://www.upwork.com/freelancers/~01471ca462b236e8e5"><img src="docs/media/upwork.svg" width="112" alt="Upwork de Eliud Rojas Mendoza"></a></p>
+
+</div>
