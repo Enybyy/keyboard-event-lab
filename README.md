@@ -2,97 +2,93 @@
 
 # Keyboard Event Lab
 
-Un espacio para escribir, observar eventos de teclado y exportar una sesión, disponible en el navegador y como aplicación Python.
+A workspace for typing, inspecting keyboard events and exporting a session, available in the browser and as a Python desktop application.
 
-<a href="https://enybyy.github.io/keyboard-event-lab/"><img src="docs/media/demo.svg" width="360" alt="Abrir demo"></a>
+<a href="https://enybyy.github.io/keyboard-event-lab/"><img src="docs/media/demo.svg" width="360" alt="Open demo"></a>
 
-<p><a href="https://github.com/Enybyy"><img src="docs/media/github.svg" width="112" alt="GitHub de Eliud Rojas Mendoza"></a>
-<a href="https://www.linkedin.com/in/eliud-rojas-mendoza-414652212/"><img src="docs/media/linkedin.svg" width="112" alt="LinkedIn de Eliud Rojas Mendoza"></a>
-<a href="https://www.upwork.com/freelancers/~01471ca462b236e8e5"><img src="docs/media/upwork.svg" width="112" alt="Upwork de Eliud Rojas Mendoza"></a></p>
+<p><a href="https://github.com/Enybyy"><img src="docs/media/github.svg" width="112" alt="Eliud Rojas Mendoza on GitHub"></a>
+<a href="https://www.linkedin.com/in/eliud-rojas-mendoza-414652212/"><img src="docs/media/linkedin.svg" width="112" alt="Eliud Rojas Mendoza on LinkedIn"></a>
+<a href="https://www.upwork.com/freelancers/~01471ca462b236e8e5"><img src="docs/media/upwork.svg" width="112" alt="Eliud Rojas Mendoza on Upwork"></a></p>
 
-[![Keyboard Event Lab en uso](assets/screenshots/keyboard-desktop.png)](https://enybyy.github.io/keyboard-event-lab/)
+[![Keyboard Event Lab in use](assets/screenshots/keyboard-desktop.png)](https://enybyy.github.io/keyboard-event-lab/)
 
-*Captura real del laboratorio. El registro se limita a su propia área de escritura.*
+*Actual laboratory screenshot. Recording is limited to its own typing area.*
 
-[Acerca del proyecto](#acerca-del-proyecto) · [Recorrido](#en-el-día-a-día) · [Tecnología](#cómo-está-construido) · [Uso local](#uso-local)
+[About](#about-the-project) · [Workflow](#everyday-workflow) · [Technology](#built-with) · [Run locally](#local-use)
 
 </div>
 
-## Acerca del proyecto
 
-El texto que aparece en un campo no muestra por sí solo cómo se recibió cada pulsación. Keyboard Event Lab coloca el área de escritura junto a un teclado visual y una consola para observar la relación entre lo que se escribe y los eventos que recibe la aplicación.
+## About the project
 
-El registro se inicia de forma explícita, puede pausarse y conserva una sesión acotada. La exportación JSON permite revisar los eventos fuera del laboratorio, útil para explorar comportamientos de entrada y probar interacciones. La versión Python ofrece el mismo tipo de espacio de trabajo en su propia ventana.
+Text in an input field does not show how each keystroke was received. Keyboard Event Lab places a typing area beside a visual keyboard and event console, making the relationship between typed text and application events visible.
 
-## En el día a día
+Recording starts explicitly, can be paused and keeps a bounded session. JSON export allows events to be reviewed outside the lab when exploring input behavior or testing interactions. The Python version provides the same kind of workspace in its own window.
 
-| Dentro del proyecto | Detalle |
+## Everyday workflow
+
+| Inside the project | Detail |
 | --- | --- |
-| Entrada visible | Registro iniciado expresamente dentro de su propia área de escritura. |
-| Inspección de eventos | Tecla, código físico, modificadores, repetición y acción en la versión web. |
-| Control de la sesión | Inicio, pausa, limpieza y un historial acotado de eventos. |
-| Exportación | Sesión JSON para consultar fuera del laboratorio. |
-| Versión de escritorio | Aplicación Python/Tkinter con registro de pulsaciones en su propia ventana. |
+| Visible input | Explicitly started recording within the app's own typing area. |
+| Event inspection | Key, physical code, modifiers, repeat and action in the web version. |
+| Session controls | Start, pause, clear and bounded event history. |
+| Export | JSON session for review outside the laboratory. |
+| Desktop version | Python/Tkinter application recording key presses in its own window. |
 
-## Explorar la demo
+## Explore the demo
 
-1. Pulsa **Iniciar registro** y escribe dentro del área de prueba.
-2. Inspecciona la tecla, el código físico y la acción de pulsar/soltar.
-3. Pulsa **Pausar**, **Limpiar eventos** o **Exportar JSON**.
+The interface uses Spanish labels:
 
-La versión web conserva los últimos 2.000 eventos e incluye modificadores, timestamp y repetición. La versión Python registra pulsaciones con nombre de tecla, carácter y timestamp. Los controles y otras ventanas quedan fuera del registro. La información vive en memoria; solo se guarda si eliges exportarla.
+1. Select **Iniciar registro** (Start recording) and type in the test area.
+2. Inspect the key, physical code and keydown/keyup action.
+3. Select **Pausar** (Pause), **Limpiar eventos** (Clear events) or **Exportar JSON** (Export JSON).
 
-## Alcance
+The web version keeps the latest 2,000 events, including modifiers, timestamps and repeat state. The Python version records key presses with key name, character and timestamp. Controls and other windows are excluded. Information stays in memory unless you choose to export it.
 
-Este proyecto reemplaza el antiguo `KeyLogger` de la suite por un laboratorio de entrada visible. No usa hooks globales, `pynput`, escucha de otras aplicaciones, transmisión de datos ni ejecución oculta. Cerrar la página o ventana termina la sesión. Usa texto de prueba.
+## Scope
 
-Los navegadores no informan todas las combinaciones reservadas del sistema operativo. El teclado ilustrado cubre letras, espacio, Enter y retroceso; la consola puede mostrar otros eventos que el navegador entregue. Pegado, dictado e IME pueden insertar texto sin una pulsación por carácter.
+This project replaces the suite's former `KeyLogger` with a visible input laboratory. It does not use global hooks, `pynput`, monitoring of other applications, data transmission or hidden execution. Closing the page or window ends the session. Use sample text.
 
-## Cómo está construido
+Browsers do not report every operating-system shortcut. The illustrated keyboard covers letters, space, Enter and Backspace; the console can display other events delivered by the browser. Paste, dictation and IME input can insert text without one keystroke per character.
 
-| Área | Tecnología |
+## Built with
+
+| Area | Technology |
 | --- | --- |
-| Demo web | HTML, CSS y JavaScript |
-| Aplicación de escritorio | Python y Tkinter |
-| Sesiones | Historial en memoria y exportación JSON |
-| Verificación | unittest y Playwright |
+| Web demo | HTML, CSS and JavaScript |
+| Desktop application | Python and Tkinter |
+| Sessions | In-memory history and JSON export |
+| Verification | unittest and Playwright |
 
-## Uso local
+## Local use
 
 <details>
-<summary><strong>Ejecutar en tu equipo</strong></summary>
+<summary><strong>Run on your computer</strong></summary>
 
-La demo no requiere instalación. Para servirla localmente:
+The public demo needs no installation. To serve the repository locally:
 
 ```powershell
 python -m http.server 5086 --bind 127.0.0.1
 ```
 
-Abre `http://127.0.0.1:5086`. La versión de escritorio requiere Python 3.12+ con Tkinter:
+Open `http://127.0.0.1:5086`. The desktop version requires Python 3.12+ with Tkinter:
 
 ```powershell
 python app.py
 ```
 
-Tkinter forma parte del instalador habitual de Python para Windows. Algunas distribuciones Linux requieren instalar su paquete Tk.
+Tkinter is included in the usual Python installer for Windows. Some Linux distributions require their Tk package to be installed separately.
 
 </details>
 
 <details>
-<summary><strong>Pruebas</strong></summary>
+<summary><strong>Tests</strong></summary>
 
 ```powershell
 python -m unittest discover -s tests -v
 ```
 
-Los tests verifican inicio/pausa, límite de historial, secuencia, limpieza y exportación Unicode. `scripts/browser-test.cjs` verifica el flujo real de entrada, pausa, exclusión de controles, exportación y ancho móvil usando Playwright y toma las capturas del producto.
-
-</details>
-
-<details>
-<summary><strong>English</strong></summary>
-
-A visible keyboard event workbench with a browser demo and a small Python/Tkinter desktop application. It captures only its own focused input, requires an explicit start, keeps bounded in-memory history, and exports JSON on request. It does not monitor other applications.
+Tests cover start/pause, history bounds, sequence, clearing and Unicode export. `scripts/browser-test.cjs` uses Playwright to check typing, pause, control exclusion, export and responsive layout, and captures the application.
 
 </details>
 
@@ -102,8 +98,8 @@ A visible keyboard event workbench with a browser demo and a small Python/Tkinte
 
 **Eliud Rojas Mendoza · Enybyy**
 
-<p><a href="https://github.com/Enybyy"><img src="docs/media/github.svg" width="112" alt="GitHub de Eliud Rojas Mendoza"></a>
-<a href="https://www.linkedin.com/in/eliud-rojas-mendoza-414652212/"><img src="docs/media/linkedin.svg" width="112" alt="LinkedIn de Eliud Rojas Mendoza"></a>
-<a href="https://www.upwork.com/freelancers/~01471ca462b236e8e5"><img src="docs/media/upwork.svg" width="112" alt="Upwork de Eliud Rojas Mendoza"></a></p>
+<p><a href="https://github.com/Enybyy"><img src="docs/media/github.svg" width="112" alt="Eliud Rojas Mendoza on GitHub"></a>
+<a href="https://www.linkedin.com/in/eliud-rojas-mendoza-414652212/"><img src="docs/media/linkedin.svg" width="112" alt="Eliud Rojas Mendoza on LinkedIn"></a>
+<a href="https://www.upwork.com/freelancers/~01471ca462b236e8e5"><img src="docs/media/upwork.svg" width="112" alt="Eliud Rojas Mendoza on Upwork"></a></p>
 
 </div>
